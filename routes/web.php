@@ -20,4 +20,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/', [PageController::class, 'index']);
+Route::get('/trains', [PageController::class, 'trains'])->name('guest.trains');
+Route::get('/trains{train}', [PageController::class, 'trains']);
