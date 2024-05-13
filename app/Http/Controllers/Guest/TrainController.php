@@ -13,7 +13,10 @@ class TrainController extends Controller
      */
     public function index()
     {
-    $trains = Train::all();
+     $trains = Train::all();
+    // $curentDay = now()->toDateString();
+    // $trains = Train::whereDate('departure_time', $curentDay);
+    // dd($trains);
     return view ('guest.trains', compact('trains') );
     }
     
