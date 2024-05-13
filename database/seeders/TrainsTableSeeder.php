@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Train;
+
 
 class TrainsTableSeeder extends Seeder
 {
@@ -46,7 +48,6 @@ class TrainsTableSeeder extends Seeder
                 'on_schedule'=>1,
                 'cancelled'=>0,
             ],
-            // Aggiungi qui gli altri 7 array
             [
                 'company'=>'DB',
                 'departure'=>'Berlin Hauptbahnhof',
@@ -125,8 +126,18 @@ class TrainsTableSeeder extends Seeder
                 'cancelled'=>0,
             ]
         ];
-        for ($i=0; $i<10; $i++){
-
+        foreach ($trains as $train){
+            $newTrain = new Train();
+            $newTrain->company = $train['company'];
+            $newTrain-> departure= $train['departure'];
+            $newTrain->arrival = $train['arrival'];
+            $newTrain->departure_time = $train['departure_time'];
+            $newTrain-> arrival_time= $train['arrival_time'];
+            $newTrain->code_train = $train['code_train'];
+            $newTrain->wagon = $train['wagon'];
+            $newTrain-> on_schedule= $train['on_schedule'];
+            $newTrain->cancelled = $train['cancelled'];
+            $newTrain->save();
         };
     }
 }
