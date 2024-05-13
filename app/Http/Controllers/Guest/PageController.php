@@ -13,6 +13,7 @@ class PageController extends Controller
     }
 
     public function trains(){
-        
+
+        return view('guest.trains'); 
     }
 }

@@ -1,14 +1,48 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Trains</h1>
+    <h1 class="text-center">Trains</h1>
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    {{}}
+
+            @foreach ($trains as $train)
+                <div class="col-12">
+                    <div class="d-flex justify-content-evenly align-items-center p-3 border rounded my-3 ">
+                        <section>
+                            <div>
+                                {{ $train->id }}
+                            </div>
+                            <div>
+                                {{ $train->company }}
+                            </div>
+                        </section>
+                        <section>
+                            <div>
+                                {{ $train->departure }}
+                            </div>
+                            <div>
+                                {{ $train->arrival }}
+                            </div>
+                        </section>
+                        <section>
+                            <div>
+                                {{ $train->departure_time }}
+                            </div>
+                            <div>
+                                {{ $train->arrival_time }}
+                            </div>
+                        </section>
+                        <section>
+                            <div>
+                                {{ $train->code_train }}
+                            </div>
+                            <div>
+                                {{ $train->wagon }}
+                            </div>
+                        </section>
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
     </div>
 @endsection
