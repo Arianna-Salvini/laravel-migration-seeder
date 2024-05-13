@@ -18,3 +18,11 @@ Ogni treno dovrà avere almeno:
 Inserite inizialmente i dati tramite PhpMyAdmin o artisan tinker per chi ne ha capito l'utilizzo.
 
 Create il modello Model relativo alla migrazione che avete predisposto al fine di mappare la tabelle del db ed un Controller per mostrare nella home page tutti i treni che sono in partenza dalla data odierna.
+
+# Descrizione 2:
+
+- Aggiungiamo un seeder per la classe Train usando un array di dati fittizzi fatta a mano.
+
+## BONUS: 
+- Implementare il seeder tramite FakerPHP
+
