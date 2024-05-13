@@ -17,7 +17,7 @@ use App\Http\Controllers\Guest\PageController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('wellcome');
 
 
 Route::get('/trains', [PageController::class, 'trains'])->name('guest.trains');
