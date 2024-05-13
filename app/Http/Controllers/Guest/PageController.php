@@ -11,4 +11,8 @@ class PageController extends Controller
     {
         return view('welcome');
     }
+
+    public function trains(){
+        
+    }
 }

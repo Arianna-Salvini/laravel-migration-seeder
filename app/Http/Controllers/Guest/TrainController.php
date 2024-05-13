@@ -14,7 +14,15 @@ class TrainController extends Controller
     public function index()
     {
     $trains = Train::all();
-    return view ('welcome', compact('trains') );
+    return view ('guest.trains', compact('trains') );
+    }
+    
+    /**
+     * Display the specified resource.
+     */
+    public function show(Train $train)
+    {
+        dd((Train::all()));
     }
 
     /**
@@ -33,13 +41,6 @@ class TrainController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Train $train)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
