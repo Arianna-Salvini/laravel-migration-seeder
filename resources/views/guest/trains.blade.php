@@ -9,6 +9,7 @@
                 <div class="col-12">
                     <div class="d-flex justify-content-evenly align-items-center p-3 border rounded my-3 ">
                         <section class="text-center">
+                            <h1 class="text-center">Trains ({{ count($trains) }})</h1>
                             <div>
                                 {{ $train->id }}
                             </div>
