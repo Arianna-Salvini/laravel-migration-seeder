@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Guest;
 use App\Http\Controllers\Controller;
 use App\Models\Train;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class TrainController extends Controller
 {
@@ -16,6 +17,8 @@ class TrainController extends Controller
      $trains = Train::all();
     // $curentDay = now()->toDateString();
     // $trains = Train::whereDate('departure_time', $curentDay);
+    // $trains = Train::where('departure_time', '>', '2024-05-15 00:00:00')->get();
+    $trains = Train::where('departure_time', '>=', Carbon::now()->format('Y-m-d H:i:s'))->get();
     // dd($trains);
     return view ('guest.trains', compact('trains') );
     }
